@@ -1,7 +1,5 @@
-/* Estilos básicos */
 body {
-  font-family: italic, sans-serif;
-  font-style: italic;
+  font-family: Arial, sans-serif;
   background-color: #ffe6e6;
   margin: 0;
   padding: 0;
@@ -28,30 +26,30 @@ body {
   padding: 10px;
 }
 
+/* Imagem com bordas coloridas */
 .image-border {
   display: inline-block;
-  padding: 5px;
-  border-radius: 15px; /* Margem arredondada */
-  animation: borderRotate 3s linear infinite;
+  padding: 10px;
+  border-radius: 15px; /* Deixa as bordas arredondadas */
   border: 5px solid transparent;
-  border-image: linear-gradient(45deg, #008C45, #F4F5F0, #CD212A, #008C45);
-  border-image-slice: 1;
+  background: linear-gradient(45deg, #5dd761, #F9F9F9, #dc584c, #5dd761, #F9F9F9, #dc584c, #5dd761); /* Cores suavizadas */
+  background-size: 200% 200%;
+  animation: borderRotate 5s linear infinite;
+}
+
+.responsive-image {
+  width: 90%;
+  max-width: 600px;
+  border-radius: 10px; /* Mantém as bordas arredondadas da imagem */
 }
 
 @keyframes borderRotate {
   0% {
-    border-image-source: linear-gradient(0deg, #008C45, #F4F5F0, #CD212A, #008C45);
+    background-position: 0% 50%;
   }
   100% {
-    border-image-source: linear-gradient(360deg, #008C45, #F4F5F0, #CD212A, #008C45);
+    background-position: 100% 50%;
   }
-}
-
-/* Imagem */
-.responsive-image {
-  width: 80%; /* Reduz o tamanho para celulares */
-  max-width: 500px;
-  border-radius: 15px;
 }
 
 .caption {
@@ -64,7 +62,7 @@ body {
 .line {
   width: 5px;
   height: 100px;
-  background: linear-gradient(to bottom, #008C45, #F4F5F0, #CD212A);
+  background: linear-gradient(to bottom, #7AD47D, #F9F9F9, #FF8A80);
   margin: 10px auto;
 }
 
@@ -122,15 +120,10 @@ body {
   padding: 15px;
   background: #fef7e1;
   border-radius: 5px;
-  position: relative;
 }
 
 .flag {
-  width: 30px; /* Reduz o tamanho da bandeira */
-  height: auto;
-  position: absolute;
-  top: 5px;
-  right: 5px;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  width: 50px;
+  display: block;
+  margin: 0 auto 10px auto;
 }
